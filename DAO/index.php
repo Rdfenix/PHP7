@@ -3,16 +3,12 @@
 	require_once("config.php");
 
 	/*$sql = new SQL();
-
 	$usuarios = $sql->Select("SELECT * FROM tb_usuarios");
-
 	echo json_encode($usuarios);*/
 
 	/*$root = new Usuario();
-
 	//Traz um usuario com base no seu ID
 	$root->loadById(2);
-
 	echo $root;*/
 
 	/*$list = Usuario::getList();
@@ -32,9 +28,15 @@
 	$aluno->Insert();
 	echo $aluno;*/
 
-	$usuario = new Usuario();
+	//Alterar um usuario
+	/*$usuario = new Usuario();
 	$usuario->loadById(8);
 	$usuario->Update("professor", "1234587910");
+	echo $usuario;*/
+
+	$usuario = new Usuario();
+	$usuario->loadById(7);
+	$usuario->Delete();
 	echo $usuario;
 
 ?>
