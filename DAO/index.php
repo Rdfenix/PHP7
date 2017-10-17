@@ -8,10 +8,27 @@
 
 	echo json_encode($usuarios);*/
 
-	$root = new Usuario();
+	/*$root = new Usuario();
 
+	//Traz um usuario com base no seu ID
 	$root->loadById(2);
 
-	echo $root;
+	echo $root;*/
+
+	/*$list = Usuario::getList();
+	echo json_encode($list);*/
+
+	//Carrega uma lista de usuarios buscando pelo login
+	/*$search = Usuario::Search("Ru");
+	echo json_encode($search);*/
+
+	//carrega um usuario usando login e senha
+	/*$usuario = new Usuario();
+	$usuario->Login("Rudnei", "rud@123456");
+	echo $usuario;*/
+
+	$aluno = new Usuario("Ana Paula", "147258369");
+	$aluno->Insert();
+	echo $aluno;
 
 ?>
