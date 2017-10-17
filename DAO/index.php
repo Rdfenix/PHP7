@@ -27,8 +27,14 @@
 	$usuario->Login("Rudnei", "rud@123456");
 	echo $usuario;*/
 
-	$aluno = new Usuario("Ana Paula", "147258369");
+	//Insere um novo usuario no banco
+	/*$aluno = new Usuario("Ana Paula", "147258369");
 	$aluno->Insert();
-	echo $aluno;
+	echo $aluno;*/
+
+	$usuario = new Usuario();
+	$usuario->loadById(8);
+	$usuario->Update("professor", "1234587910");
+	echo $usuario;
 
 ?>
