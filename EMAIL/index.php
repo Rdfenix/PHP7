@@ -22,7 +22,7 @@
 	$mail->SMTPDebug = 2;
 
 	//Set the hostname of the mail server
-	$mail->Host = 'Smtp.googlemail.com';
+	$mail->Host = 'smtp.gmail.com';
 	// use
 	//$mail->Host = gethostbyname('smtp.gmail.com');
 	// if your network does not support SMTP over IPv6
@@ -33,6 +33,13 @@
 	//Set the encryption system to use - ssl (deprecated) or tls
 	$mail->SMTPSecure = 'tls';
 
+	$mail->SMTPOptions = array(
+	    'ssl' => array(
+	        'verify_peer' => false,
+	        'verify_peer_name' => false,
+	        'allow_self_signed' => true
+	    )
+	);
 	//Whether to use SMTP authentication
 	$mail->SMTPAuth = true;
 
@@ -43,13 +50,13 @@
 	$mail->Password = "********";
 
 	//Set who the message is to be sent from
-	$mail->setFrom('**************', 'Curso PHP7');
+	$mail->setFrom('***************', 'Curso PHP7');
 
 	//Set an alternative reply-to address
 	//$mail->addReplyTo('replyto@example.com', 'First Last');
 
 	//Set who the message is to be sent to
-	$mail->addAddress('******************', 'John Doe');
+	$mail->addAddress('*******************', 'John Doe');
 
 	//Set the subject line
 	$mail->Subject = 'Teste de envio de email';
